@@ -33,7 +33,6 @@ public class RequestHandler extends AbstractHandler {
         var buildRequest =  BuildRequest.fromJson(json);
         System.out.println("ID: " + buildRequest.hashId );
         System.out.println("email: " + buildRequest.pusher.email );
-        System.out.println("name: " + buildRequest.pusher.name );
         executor.runBuild(buildRequest);
         baseRequest.setHandled(true);
         response.getWriter().println(json);
