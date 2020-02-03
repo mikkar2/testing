@@ -11,7 +11,7 @@ public class Main {
             server.start();
             server.join();
         } catch(Exception e) {
-            System.err.println(e);
+            System.err.println("dafuq");
         }
     }
 }
