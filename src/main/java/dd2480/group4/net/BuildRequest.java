@@ -19,10 +19,13 @@ public class BuildRequest {
     Pusher pusher;
 
     public static BuildRequest fromJson(String json) throws IOException {
+
         System.out.println("1.2");
         var mapper = new ObjectMapper();
         System.out.println("2.2");
-        BuildRequest a = mapper.readValue(json, BuildRequest.class); //jidder here
+        System.out.println("\n\n\n");
+        System.out.println(json);
+        var a = mapper.readValue(json, BuildRequest.class); //jidder here
         System.out.println("3.2");
         return a;
     }
