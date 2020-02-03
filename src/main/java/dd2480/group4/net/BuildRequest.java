@@ -19,7 +19,9 @@ public class BuildRequest {
     Pusher pusher;
 
     public static BuildRequest fromJson(String json) throws IOException {
+        System.out.println("3.1");
         var mapper = new ObjectMapper();
+        System.out.println("3.2");
         return mapper.readValue(json, BuildRequest.class);
     }
 
