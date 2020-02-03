@@ -22,7 +22,9 @@ public class BuildRequest {
         System.out.println("1.2");
         var mapper = new ObjectMapper();
         System.out.println("2.2");
-        return mapper.readValue(json, BuildRequest.class);
+        var a = mapper.readValue(json, BuildRequest.class);
+        System.out.println("3.2");
+        return a;
     }
 
 
