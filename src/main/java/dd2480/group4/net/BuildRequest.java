@@ -10,7 +10,7 @@ import java.io.IOException;
  * Defines the structure of a request to build the project
  * TODO: should model the repository at a given state (i.e. url, commit hash, branch, time and date)
  */
-@JsonIgnoreProperties
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class BuildRequest {
 
     @JsonProperty("git_url")
