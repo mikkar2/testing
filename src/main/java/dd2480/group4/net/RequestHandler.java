@@ -30,6 +30,7 @@ public class RequestHandler extends AbstractHandler {
         response.setStatus(HttpServletResponse.SC_OK);
         var bytes = request.getInputStream().readAllBytes();
         var json = new String(bytes, StandardCharsets.UTF_8);
+        System.out.println(json);
         var buildRequest =  BuildRequest.fromJson(json);
         executor.runBuild(buildRequest);
         baseRequest.setHandled(true);
