@@ -26,11 +26,13 @@ public class RequestHandler extends AbstractHandler {
                        HttpServletRequest request,
                        HttpServletResponse response) throws IOException
     {
-        System.out.println("haaaaaaa");
+        System.out.println("1.1");
         response.setContentType("text/html;charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
         var bytes = request.getInputStream().readAllBytes();
+        System.out.println("2.1");
         var json = new String(bytes, StandardCharsets.UTF_8);
+        System.out.println("3.1");
         var buildRequest =  BuildRequest.fromJson(json);
         System.out.println("ID: " + buildRequest.hashId );
         System.out.println("email: " + buildRequest.pusher.email );
