@@ -26,6 +26,7 @@ public class RequestHandler extends AbstractHandler {
                        HttpServletRequest request,
                        HttpServletResponse response) throws IOException
     {
+        System.out.println("haaaaaaa");
         response.setContentType("text/html;charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
         var bytes = request.getInputStream().readAllBytes();
