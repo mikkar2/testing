@@ -37,6 +37,8 @@ public class RequestHandler extends AbstractHandler {
         System.out.println("4.1");
         System.out.println("ID: " + buildRequest.hashId );
         System.out.println("email: " + buildRequest.pusher.email );
+        System.out.println("url: " + buildRequest.url );
+        System.out.println("name: " + buildRequest.pusher.name );
         executor.runBuild(buildRequest);
         baseRequest.setHandled(true);
         response.getWriter().println(json);
