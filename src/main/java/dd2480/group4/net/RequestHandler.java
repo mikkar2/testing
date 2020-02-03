@@ -34,6 +34,7 @@ public class RequestHandler extends AbstractHandler {
         var json = new String(bytes, StandardCharsets.UTF_8);
         System.out.println("3.1");
         var buildRequest =  BuildRequest.fromJson(json);
+        System.out.println("4.1");
         System.out.println("ID: " + buildRequest.hashId );
         System.out.println("email: " + buildRequest.pusher.email );
         executor.runBuild(buildRequest);
